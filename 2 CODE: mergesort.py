@@ -1,3 +1,9 @@
+'''Design and implement merge sort algorithm that takes user input and
+displays the execution time required. State the design strategy used and 
+comment on the time complexity of the same.
+
+'''
+
 import time
 
 def mergesort(arr, low, high):
