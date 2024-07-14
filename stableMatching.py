@@ -1,3 +1,17 @@
+''' Given a set of men’s and women’s preference list. 
+Design and implement Gale-Shapley algorithm to determine 
+the stable set of marriages among them. Comment on the time complexity of the same.
+Assumptions: Men propose first according to their preference list. 
+Women can choose a better partner based on the preference.
+Men’s preference list
+A: V W X
+B: W V X
+C: V W X
+Women’s preference list
+V: A B C
+W: B C A
+X: C A B
+'''
 def stable_marriage(n, men_pref, women_pref):
     free_men = list(range(n))
     woman_partner = [-1] * n
