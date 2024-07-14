@@ -12,6 +12,7 @@ V: A B C
 W: B C A
 X: C A B
 '''
+import time
 def stable_marriage(n, men_pref, women_pref):
     free_men = list(range(n))
     woman_partner = [-1] * n
@@ -55,6 +56,11 @@ men_pref = get_preferences(men, women, is_man=True)
 print("Enter the women's preference lists:")
 women_pref = get_preferences(women, men, is_man=False)
 
+start = time.time()
 pairs = stable_marriage(n, men_pref, women_pref)
+end = time.time()
+
 for m, w in pairs:
     print(f"Man {men[m]} is engaged to Woman {women[w]}")
+
+print("Time taken: ", end-start)
