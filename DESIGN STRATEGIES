@@ -1,0 +1,69 @@
+
+### Gale-Shapley (Stable Matching)
+**Design Strategy**:
+- **Greedy** approach to find a stable matching.
+- Each participant proposes to their most preferred choice not yet proposed.
+- Acceptances are tentative, subject to finding a more preferred match.
+- Repeat until all participants are matched.
+
+### Merge Sort
+**Design Strategy**:
+- **Divide and Conquer** algorithm.
+- Recursively split the array into halves until each sub-array contains a single element.
+- Merge the sub-arrays in sorted order to produce the sorted array.
+
+### Quick Sort
+**Design Strategy**:
+- **Divide and Conquer** algorithm.
+- Select a pivot element from the array (FIRST ELEMENT)
+- Partition the array into elements less than and greater than the pivot.
+- Recursively apply the same strategy to the partitions.
+
+### Dijkstra
+**Design Strategy**:
+- **Greedy** algorithm to find the shortest paths from a source vertex.
+- Use a priority queue to repeatedly select the vertex with the smallest known distance.
+- Update the distances to its adjacent vertices.
+- Continue until all vertices are processed.
+
+### Kruskal
+**Design Strategy**:
+- **Greedy** algorithm for finding the Minimum Spanning Tree (MST).
+- Sort all edges by weight.
+- Use a disjoint-set to add edges to the MST, avoiding cycles.
+- Continue until the MST spans all vertices.
+
+### Weighted Interval Scheduling (Dynamic Programming)
+**Design Strategy**:
+- **Dynamic Programming** to maximize the total weight of non-overlapping intervals.
+- Sort intervals by finish time.
+- Define subproblems to include the maximum weight up to each interval.
+- Use a recursive relation to include or exclude each interval.
+
+### Subset Sum (Dynamic Programming)
+**Design Strategy**:
+- **Dynamic Programming** to determine if a subset with a given sum exists.
+- Create a boolean DP array where the index represents achievable sums.
+- Use previous results to determine if the current element can form the required sum.
+
+### Knapsack (Dynamic Programming)
+**Design Strategy**:
+- **Dynamic Programming** to maximize the value in a knapsack of fixed capacity.
+- Define subproblems for the maximum value achievable with each weight limit.
+- Use a recursive relation to include or exclude each item.
+
+### Bellman-Ford
+**Design Strategy**:
+- **Dynamic Programming** algorithm to find shortest paths from a source vertex, allowing negative weights.
+- Initialize distances from the source.
+- Relax all edges repeatedly for (V-1) iterations.
+- Check for negative-weight cycles in a final iteration.
+
+### N-Queens (Backtracking)
+**Design Strategy**:
+- **Backtracking** algorithm to place N queens on an NxN chessboard.
+- Place queens row by row, ensuring no two queens threaten each other.
+- If placing a queen results in a conflict, backtrack and try the next position.
+- Continue until all queens are placed.
+
+These design strategies provide concise summaries of the primary approaches and methods used by each algorithm.
