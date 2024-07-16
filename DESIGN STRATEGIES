@@ -66,4 +66,3 @@
 - If placing a queen results in a conflict, backtrack and try the next position.
 - Continue until all queens are placed.
 
-These design strategies provide concise summaries of the primary approaches and methods used by each algorithm.
