@@ -9,44 +9,31 @@ State the design strategy used and comment on the time complexity of the same.
 import time
 
 def partition(A, l, r):
-    p = A[l]  # Selecting the first element as pivot
-    i = l     # Left pointer starting at the beginning of the array
-    j = r + 1 # Right pointer starting just after the pivot
-    
-    while i < j:
-        while i <= r and A[i] <= p:
+    p = A[l]  # pivot
+    i = l
+    j = r
+    while True:
+        while A[i] < p:
             i += 1
         while A[j] > p:
             j -= 1
-        if i < j:
-            A[i], A[j] = A[j], A[i]
-    
-    # Swap pivot with A[j-1] to put the pivot in its correct place
-    A[l], A[j-1] = A[j-1], A[l]
-    return j-1
+        if i >= j:
+            return j
+        A[i], A[j] = A[j], A[i]
+        i += 1
+        j -= 1
 
 def quicksort(A, l, r):
     if l < r:
-        # Partition the array into two parts using the partition function
         s = partition(A, l, r)
-        
-        # Recursively sort the left and right parts
-        quicksort(A, l, s-1)     # Sort the left part
-        quicksort(A, s + 1, r)   # Sort the right part
+        quicksort(A, l, s)
+        quicksort(A, s + 1, r)
 
-# Input array from user
 A = list(map(int, input("Enter the elements: ").split()))
-n = len(A)
 
-# Measure the start time of the sorting process
 start = time.time()
-
-# Sort the array using quicksort algorithm
-quicksort(A, 0, n - 1)
-
-# Measure the end time of the sorting process
+quicksort(A, 0, len(A)-1)
 end = time.time()
 
-# Print the sorted array and the time taken for sorting
 print("Sorted array: ", A)
 print("Time taken: ", end - start)
