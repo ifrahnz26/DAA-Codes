@@ -43,9 +43,10 @@
 
 ### Subset Sum (Dynamic Programming)
 **Design Strategy**:
-- **Dynamic Programming** to determine if a subset with a given sum exists.
-- Create a boolean DP array where the index represents achievable sums.
-- Use previous results to determine if the current element can form the required sum.
+- **Dynamic Programming** approach to determine the maximum achievable weight within a given capacity.
+- Initialize a table to store solutions to subproblems, setting base cases appropriately.
+- Iterate through items and capacities, updating the table by considering the inclusion and exclusion of each item.
+- Use the table to find the optimal solution by tracing back the decisions made.
 
 ### Knapsack (Dynamic Programming)
 **Design Strategy**:
