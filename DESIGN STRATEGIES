@@ -22,8 +22,9 @@
 ### Dijkstra
 **Design Strategy**:
 - **Greedy** algorithm to find the shortest paths from a source vertex.
-- Use a priority queue to repeatedly select the vertex with the smallest known distance.
-- Update the distances to its adjacent vertices.
+- Use a simple array to store distances and a boolean array to track processed vertices.
+- Repeatedly select the unprocessed vertex with the smallest known distance.
+- Update the distances to its adjacent vertices
 - Continue until all vertices are processed.
 
 ### Kruskal
