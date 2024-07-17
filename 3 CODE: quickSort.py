@@ -11,27 +11,19 @@ import time
 def partition(A, l, r):
     p = A[l]  # Selecting the first element as pivot
     i = l     # Left pointer starting at the beginning of the array
-    j = r     # Right pointer starting at the end of the array
+    j = r+1     # Right pointer starting at the end of the array
     
-    while True:
-        # Move the left pointer to the right until finding an element greater than or equal to the pivot
+    while i < j:
         while A[i] < p:
             i += 1
-        
-        # Move the right pointer to the left until finding an element less than or equal to the pivot
         while A[j] > p:
             j -= 1
-        
-        # If the left pointer is greater than or equal to the right pointer, break the loop
-        if i >= j:
-            return j
-        
-        # Swap the elements at the left and right pointers
-        A[i], A[j] = A[j], A[i]
-        
-        # Move both pointers towards the center
-        i += 1
-        j -= 1
+        if i < j:
+            A[i], A[j] = A[j], A[i]
+    
+    # Swap pivot with A[j] to put the pivot in its correct place
+    A[l], A[j] = A[j], A[l]
+    return j
 
 def quicksort(A, l, r):
     if l < r:
@@ -49,7 +41,7 @@ A = list(map(int, input("Enter the elements: ").split()))
 start = time.time()
 
 # Sort the array using quicksort algorithm
-quicksort(A, 0, len(A) - 1)
+quicksort(A, 0, len(A) - 2)
 
 # Measure the end time of the sorting process
 end = time.time()
