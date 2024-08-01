@@ -1,0 +1,61 @@
+MENTION WHAT EACH VARIABLE REPRESENTS IN EACH TIME COMPLEXITY
+
+1. **BFS Algorithm**
+   - **Design Strategy**: Uses an iterative approach with a queue to explore nodes level by level from a given source node.
+   - **Time Complexity**: Best: O(V + E), Average: O(V + E), Worst: O(V + E)
+
+2. **Merge Sort Algorithm**
+   - **Design Strategy**: Divide-and-Conquer; recursively splits the array into halves, sorts each half, and merges them back together.
+   - **Time Complexity**: Best: O(n log n), Average: O(n log n), Worst: O(n log n)
+
+3. **Counting Inversions**
+   - **Design Strategy**: Divide-and-Conquer; counts inversions during the merge step while sorting the array similar to merge sort.
+   - **Time Complexity**: Best: O(n log n), Average: O(n log n), Worst: O(n log n)
+
+4. **Gale-Shapley Algorithm**
+   - **Design Strategy**: Greedy algorithm; repeatedly matches pairs according to preferences until a stable matching is achieved.
+   - **Time Complexity**: Best: O(n^2), Average: O(n^2), Worst: O(n^2)
+
+5. **DFS Algorithm**
+   - **Design Strategy**: Uses a recursive approach to explore as far as possible along each branch before backtracking.
+   - **Time Complexity**: Best: O(V + E), Average: O(V + E), Worst: O(V + E)
+
+6. **QuickSort Algorithm**
+   - **Design Strategy**: Divide-and-Conquer; selects a pivot, partitions the array around the pivot, and recursively sorts the partitions.
+   - **Time Complexity**: Best: O(n log n), Average: O(n log n), Worst: O(n^2)
+
+7. **Prim's Algorithm**
+   - **Design Strategy**: Greedy algorithm; grows the minimum spanning tree one edge at a time by adding the smallest edge that connects to the tree.
+   - **Time Complexity**: Best: O(V^2), Average: O(V^2), Worst: O(V^2) (adjacency matrix)
+
+8. **Dijkstra's Algorithm**
+   - **Design Strategy**: Greedy algorithm; finds the shortest path from a source vertex by iteratively selecting the vertex with the minimum distance.
+   - **Time Complexity**: Best: O(ElogV) , Average: O((E + V) log V), Worst: O((E + V) log V) (with adjacency matrix)
+
+9. **Kruskal's Algorithm**
+   - **Design Strategy**: Greedy algorithm; sorts all edges by weight and adds them to the spanning tree using the Union-Find data structure to avoid cycles.
+   - **Time Complexity**: Best: O(E log V), Average: O(E log V), Worst: O(E log V)
+
+10. **Weighted Interval Scheduling**
+    - **Design Strategy**: Dynamic Programming; computes the maximum profit by considering whether to include or exclude each interval based on its value and compatibility.
+    - **Time Complexity**: Best: O(n log n), Average: O(n log n), Worst: O(n log n)
+
+11. **Subset Sum Problem**
+    - **Design Strategy**: Dynamic Programming; constructs a table to determine if a subset with a given sum exists by including or excluding each element.
+    - **Time Complexity**: Best: O(n * sum), Average: O(n * sum), Worst: O(n * sum)
+
+12. **Knapsack Problem**
+    - **Design Strategy**: Dynamic Programming; constructs a table to determine the maximum value that can be obtained by including or excluding each item based on its weight and value.
+    - **Time Complexity**: Best: O(n * W), Average: O(n * W), Worst: O(n * W)
+
+13. **Bellman-Ford Algorithm**
+    - **Design Strategy**: Dynamic Programming; relaxes all edges up to (V-1) times to find the shortest path from the source to all other vertices, handling negative weights.
+    - **Time Complexity**: Best: O(V * E), Average: O(V * E), Worst: O(V * E)
+
+14. **N-Queens Problem**
+    - **Design Strategy**: Backtracking; places queens one by one on the board and backtracks whenever a conflict is found until all queens are placed safely.
+    - **Time Complexity**: Best: O(N!), Average: O(N!), Worst: O(N!)
+
+15. **Travelling Salesman Problem**
+    - **Design Strategy**: Backtracking; explores all possible permutations of city visits to find the shortest possible route, backtracking to previous states to find optimal paths.
+    - **Time Complexity**: Best: O(n!), Average: O(n!), Worst: O(n!)
