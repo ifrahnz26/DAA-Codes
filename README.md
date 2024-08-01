@@ -2,7 +2,7 @@ Dear Students,
 
 *General Instructions For DAA Lab Semester End Exam August 2024:*
 
-##*Writeup of the Opted Program Must Consist of:*
+##*Writeup of the Opted Program Must Consist of:*##
 
 1. Mention the *Algorithm Design Strategy* Used  
 2. Write the *Algorithm for the given problem statement with appropriate comments*
