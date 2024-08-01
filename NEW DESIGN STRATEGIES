@@ -1,0 +1,46 @@
+Sure! Here are the design strategies for each of the 15 programs in 2-3 lines each:
+
+1. **BFS Algorithm**
+   - Uses an iterative approach with a queue to explore nodes level by level from a given source node.
+
+2. **Merge Sort Algorithm**
+   - Divide-and-Conquer; recursively splits the array into halves, sorts each half, and merges them back together.
+
+3. **Counting Inversions**
+   - Divide-and-Conquer; counts inversions during the merge step while sorting the array similar to merge sort.
+
+4. **Gale-Shapley Algorithm**
+   - Greedy algorithm; repeatedly matches pairs according to preferences until a stable matching is achieved.
+
+5. **DFS Algorithm**
+   - Uses a recursive approach to explore as far as possible along each branch before backtracking.
+
+6. **QuickSort Algorithm**
+   - Divide-and-Conquer; selects a pivot, partitions the array around the pivot, and recursively sorts the partitions.
+
+7. **Prim's Algorithm**
+   - Greedy algorithm; grows the minimum spanning tree one edge at a time by adding the smallest edge that connects to the tree.
+
+8. **Dijkstra's Algorithm**
+   - Greedy algorithm; finds the shortest path from a source vertex by iteratively selecting the vertex with the minimum distance.
+
+9. **Kruskal's Algorithm**
+   - Greedy algorithm; sorts all edges by weight and adds them to the spanning tree using the Union-Find data structure to avoid cycles.
+
+10. **Weighted Interval Scheduling**
+    - Dynamic Programming; computes the maximum profit by considering whether to include or exclude each interval based on its value and compatibility.
+
+11. **Subset Sum Problem**
+    - Dynamic Programming; constructs a table to determine if a subset with a given sum exists by including or excluding each element.
+
+12. **Knapsack Problem**
+    - Dynamic Programming; constructs a table to determine the maximum value that can be obtained by including or excluding each item based on its weight and value.
+
+13. **Bellman-Ford Algorithm**
+    - Dynamic Programming; relaxes all edges up to (V-1) times to find the shortest path from the source to all other vertices, handling negative weights.
+
+14. **N-Queens Problem**
+    - Backtracking; places queens one by one on the board and backtracks whenever a conflict is found until all queens are placed safely.
+
+15. **Travelling Salesman Problem**
+    - Backtracking; explores all possible permutations of city visits to find the shortest possible route, backtracking to previous states to find optimal paths.
