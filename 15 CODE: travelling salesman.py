@@ -12,7 +12,7 @@ GRAPH:
 
 '''
 
-def tsp(current_city, visited, current_cost, edges, n):
+def tsp(current_city, current_cost, n):
     if all(visited):
         for (u, v, cost) in edges:
             if u == current_city and v == 0:
@@ -25,7 +25,7 @@ def tsp(current_city, visited, current_cost, edges, n):
         if u == current_city and not visited[v]:
             visited[v] = True
             new_cost = current_cost + cost
-            min_cost = min(min_cost, tsp(v, visited, new_cost, edges, n))
+            min_cost = min(min_cost, tsp(v, new_cost, n))
             visited[v] = False
     
     return min_cost
@@ -43,7 +43,7 @@ for _ in range(m):
 visited = [False] * n
 visited[0] = True  # starting from the first city
     
-min_cost = tsp(0, visited, 0, edges, n)
+min_cost = tsp(0, 0, n)
 print("The minimum cost of the tour is:", min_cost)
 
 

@@ -11,9 +11,9 @@ FUNCTION tsp(current_city, visited, current_cost, edges, n):
     FOR each edge (u, v, cost) in edges:
         IF u == current_city AND v is not visited:
             Mark v as visited
-            new_cost = current_cost + cost
-            result_cost = CALL tsp(v, visited, new_cost, edges, n)
-            min_cost = MIN(min_cost, result_cost)
+            new_cost <- current_cost + cost
+            result_cost <- CALL tsp(v, visited, new_cost, edges, n)
+            min_cost <-> MIN(min_cost, result_cost)
             Mark v as unvisited
 
     RETURN min_cost
