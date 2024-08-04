@@ -1,0 +1,19 @@
+FUNCTION tsp(current_city, visited, current_cost, edges, n):
+    IF all cities are visited:
+        FIND the edge from current_city to the start city
+        IF such an edge exists:
+            RETURN current_cost + cost of this edge
+        ELSE:
+            RETURN infinity  # No valid path
+
+    SET min_cost to infinity
+
+    FOR each edge (u, v, cost) in edges:
+        IF u == current_city AND v is not visited:
+            Mark v as visited
+            new_cost = current_cost + cost
+            result_cost = CALL tsp(v, visited, new_cost, edges, n)
+            min_cost = MIN(min_cost, result_cost)
+            Mark v as unvisited
+
+    RETURN min_cost
