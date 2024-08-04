@@ -18,13 +18,12 @@ def dfs(graph, start, visited=None):
     if visited is None:
         visited = set() 
     visited.add(start)
-    print(f"{start} ")
+    print(f"{start}", end = " ")
     
     # Traverse through the adjacency list depth wise
     for neighbor in graph[start]:
         if neighbor not in visited:
             dfs(graph, neighbor, visited)
-    return visited
 
 
 n = int(input("Enter the number of vertices: "))
@@ -49,5 +48,6 @@ start_node = int(input("Enter the starting node for DFS: "))
 # Perform DFS
 print("DFS traversal starting from node", start_node)
 dfs(graph, start_node)
+print()
 
 
