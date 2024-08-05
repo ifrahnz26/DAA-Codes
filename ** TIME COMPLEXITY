@@ -14,7 +14,7 @@ MENTION WHAT EACH VARIABLE REPRESENTS IN EACH TIME COMPLEXITY
 
 4. **Gale-Shapley Algorithm**
    - **Design Strategy**: Greedy algorithm; repeatedly matches pairs according to preferences until a stable matching is achieved.
-   - **Time Complexity**: Best: O(n^2), Average: O(n^2), Worst: O(n^2)
+   - **Time Complexity**: Best: O(n), Average: O(n^2), Worst: O(n^2)
 
 5. **DFS Algorithm**
    - **Design Strategy**: Uses a recursive approach to explore as far as possible along each branch before backtracking.
