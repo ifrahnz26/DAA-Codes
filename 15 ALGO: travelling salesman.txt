@@ -1,3 +1,5 @@
+WITHOUT FINDING PATH: 
+
 FUNCTION tsp(current_city, visited, current_cost, edges, n):
     IF all cities are visited:
         FIND the edge from current_city to the start city
@@ -17,3 +19,33 @@ FUNCTION tsp(current_city, visited, current_cost, edges, n):
             Mark v as unvisited
 
     RETURN min_cost
+
+
+WITH FINDING PATH:
+
+vbnet
+Copy code
+FUNCTION tsp(current_city, current_cost, path):
+    IF all cities are visited:
+        FIND the edge from current_city to the start city
+        IF such an edge exists:
+            APPEND 0 to path to complete the cycle
+            RETURN current_cost + cost of this edge, path
+        ELSE:
+            RETURN infinity, []  # No valid path
+
+    SET min_cost to infinity
+    SET best_path to []
+
+    FOR each edge (u, v, cost) in edges:
+        IF u == current_city AND v is not visited:
+            Mark v as visited
+            new_cost = current_cost + cost
+            new_path = copy of path with v appended
+            cost_with_path, candidate_path = CALL tsp(v, new_cost, new_path)
+            IF cost_with_path < min_cost:
+                min_cost = cost_with_path
+                best_path = candidate_path
+            Mark v as unvisited
+
+    RETURN min_cost, best_path
