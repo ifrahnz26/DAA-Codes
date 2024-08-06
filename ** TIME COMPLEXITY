@@ -30,7 +30,7 @@ MENTION WHAT EACH VARIABLE REPRESENTS IN EACH TIME COMPLEXITY
 
 8. **Dijkstra's Algorithm**
    - **Design Strategy**: Greedy algorithm; finds the shortest path from a source vertex by iteratively selecting the vertex with the minimum distance.
-   - **Time Complexity**: Best: O(ElogV) , Average: O((E + V) log V), Worst: O((E + V) log V) (with adjacency matrix)
+   - **Time Complexity**: Best: O(ElogV) , Average: O((E + V) log V), Worst: O((E + V) log V) (with adjacency list)
 
 9. **Kruskal's Algorithm**
    - **Design Strategy**: Greedy algorithm; sorts all edges by weight and adds them to the spanning tree using the Union-Find data structure to avoid cycles.
