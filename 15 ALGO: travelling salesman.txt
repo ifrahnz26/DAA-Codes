@@ -23,8 +23,7 @@ FUNCTION tsp(current_city, visited, current_cost, edges, n):
 
 WITH FINDING PATH:
 
-vbnet
-Copy code
+
 FUNCTION tsp(current_city, current_cost, path):
     IF all cities are visited:
         FIND the edge from current_city to the start city
