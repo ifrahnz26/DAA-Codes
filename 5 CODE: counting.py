@@ -32,8 +32,8 @@ for i in range(3):
     user = list(map(int, input().split()))
     users.append(user)
 
-invC = sort_and_count(users[1])
-invB = sort_and_count(users[2])
+invB = sort_and_count(users[1])
+invC = sort_and_count(users[2])
 
 print(f"User 2 has {invB[0]} inversions.")
 print(f"User 3 has {invC[0]} inversions.")
